@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random HTML Code</title>
+</head>
+<body>
+<h1>This is a random HTML code</h1>
+<p>This code is kinda long, but it works.</p>
+<p>Here is a list of the things that this code does:</p>
+<ul>
+<li>It generates a random number between 1 and 100.</li>
+<li>It displays the random number in a text box.</li>
+<li>It has a button that allows you to generate a new random number.</li>
+</ul>
+<script>
+// This function generates a random number between 1 and 100.
+function generateRandomNumber() {
+var randomNumber = Math.floor(Math.random() * 100) + 1;
+return randomNumber;
+}
+// This function displays the random number in a text box.
+function displayRandomNumber(randomNumber) {
+var textBox = document.getElementById("randomNumber");
+textBox.innerHTML = randomNumber;
+}
+// This function is called when the "Generate Random Number" button is clicked.
+function generateRandomNumberButtonClick() {
+var randomNumber = generateRandomNumber();
+displayRandomNumber(randomNumber);
+}
+</script>
+<input type="button" value="Generate Random Number" onclick="generateRandomNumberButtonClick()">
+<input type="text" id="randomNumber" value="0">
+</body>
+</html>
